@@ -55,8 +55,9 @@ function App() {
         <div id='author' className='fs-5 align-self-end mainFont' style={{color:color}} >- {quote.author}</div>
         <section className='w-100 d-flex align-items-center justify-content-between'>
           <div className='d-flex align-items-center gap-2' >
-            <a href='https://twitter.com/intent/tweet' target="_blank" rel="noreferrer" className="rounded-1 btn-w btn-h btn-hover d-flex justify-content-center align-items-center" style={{backgroundColor:color}} ><i className={`bi bi-twitter fs-5 text-white`}/></a>
-            <a href='https://www.tumblr.com/widgets/share/tool' target="_blank" rel="noreferrer" className="rounded-1 btn-w btn-h btn-hover d-flex justify-content-center align-items-center" style={{backgroundColor:color}} ><span className='tumblrIcon'/></a>
+            <a id="tweet-quote" href={`https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=${encodeURIComponent('"' + quote.quote + '" ' + quote.author)}`} target="_blank" rel="noreferrer" className="rounded-1 btn-w btn-h btn-hover d-flex justify-content-center align-items-center" style={{backgroundColor:color}} ><i className={`bi bi-twitter fs-5 text-white`}/></a>
+            <a id="tumblr-quote" href={`https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes,freecodecamp&caption=
+      ${encodeURIComponent(quote.author)}&content=${encodeURIComponent(quote.quote)}&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button`} target="_blank" rel="noreferrer" className="rounded-1 btn-w btn-h btn-hover d-flex justify-content-center align-items-center" style={{backgroundColor:color}} ><span className='tumblrIcon'/></a>
           </div>
           <button id='new-quote' onClick={getQuote} className='btn btn-hover btn-unstyled text-white rounded-1' style={{backgroundColor:color}} >New quote</button>
         </section>
