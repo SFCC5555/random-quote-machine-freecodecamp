@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100svh;
+}
+
+span {
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.mainFont {
+  font-family: 'Raleway', sans-serif;
+  animation-name: textAnimation;
+  animation-duration: 3s;
+}
+
+
+@keyframes textAnimation {
+  
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+
+}
+
+.btn-hover:hover {
+  opacity: 80%;
+}
+
+.hover-full-opacity {
+  opacity: 75%;
+}
+
+.hover-full-opacity:hover {
+  opacity: 100%;
+}
+
+#text {
+  line-height: 40px;
+}
+
+.btn-w {
+  width: 46px;
+}
+
+.btn-h {
+  height: 40px;
+}
+
+.tumblrIcon {
+  width: 12px;
+  height: 22px;
+  background-image: url('./assets/icons/tumblrIcon.svg');
+}
